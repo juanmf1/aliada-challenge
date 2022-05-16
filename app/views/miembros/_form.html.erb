@@ -1,0 +1,17 @@
+<%= form_with(model: miembro) do |form| %>
+  <% if miembro.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(miembro.errors.count, "error") %> prohibited this miembro from being saved:</h2>
+
+      <ul>
+        <% miembro.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
