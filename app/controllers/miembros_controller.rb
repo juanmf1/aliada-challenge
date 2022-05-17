@@ -65,6 +65,6 @@ class MiembrosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def miembro_params
-      params.fetch(:miembro, {})
+      params.require(:miembro).permit(:nombre, :apellido)
     end
 end

@@ -11,7 +11,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+
+  <div class="card bg-secondary m-2" style="width: 25rem;color:white" >
+    <div class="card-header">
+      Ticket
+    </div>
+    <div class="card-body d-flex flex-column">
+        <%= form.label :nombre %>
+        <%= form.text_field :nombre %>
+  
+      <!-- 
+        <%= form.label :miembro %>
+        <%= form.select :miembro, ["Miembro 1", "Miembro 2"] %> -->
+
+        <%= form.label :status %>
+        <%= form.select :status, Ticket::STATUS_ARR %>
+
+        
+    </div>
+    <div class="card-footer">
+      <%= form.submit "Guardar ticket", :class => "btn btn-dark" %>
+    </div>
   </div>
+
+
+  
 <% end %>
