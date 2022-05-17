@@ -8,7 +8,7 @@ class Ticket < ApplicationRecord
     STATUS_ARR= [ABI,PRO,RES,REE]
 
 
-    # belongs_to :miembro
+    belongs_to :miembro
 
     def handle
         return self.nombre

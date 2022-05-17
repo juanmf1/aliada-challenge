@@ -4,7 +4,7 @@
 
 <%= link_to "<i class='bi bi-plus'></i>".html_safe + " Crear nuevo miembro", new_miembro_path, :class => "btn btn-dark float-end m-3" %>
 
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped table-hover text-center">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -20,7 +20,7 @@
         <td><%= miembro.nombre %></td>
         <td><%= miembro.apellido %></td>
         <td>
-          <div class="d-flex">
+          <div class="d-flex justify-content-center">
             <%= link_to "<i class='bi bi-three-dots'></i>".html_safe, miembro_path(miembro), :class => "btn btn-outline-primary mx-1" %>
             <%= link_to "<i class='bi bi-pencil'></i>".html_safe, edit_miembro_path(miembro), :class => "btn btn-outline-warning mx-1" %>
             <%= button_to "<i class='bi bi-trash'></i>".html_safe, miembro_path(miembro), method: :delete, :class => "btn btn-outline-danger mx-1" %>

@@ -20,9 +20,8 @@
         <%= form.label :nombre %>
         <%= form.text_field :nombre %>
   
-      <!-- 
         <%= form.label :miembro %>
-        <%= form.select :miembro, ["Miembro 1", "Miembro 2"] %> -->
+        <%= form.select :miembro_id, @miembros.each  %> 
 
         <%= form.label :status %>
         <%= form.select :status, Ticket::STATUS_ARR %>

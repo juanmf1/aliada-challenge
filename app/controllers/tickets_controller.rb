@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: %i[ show edit update destroy ]
+  before_action :set_miembros
 
   # GET /tickets or /tickets.json
   def index
@@ -63,8 +64,15 @@ class TicketsController < ApplicationController
       @ticket = Ticket.find(params[:id])
     end
 
+    def set_miembros
+      @miembros = []
+      Miembro.all.each do |miembro|
+        @miembros << [miembro.handle, miembro.id]
+      end
+    end
+
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:miembro, :nombre, :status)
+      params.require(:ticket).permit(:nombre, :status, :miembro_id)
     end
 end
