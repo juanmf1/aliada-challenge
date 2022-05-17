@@ -1,5 +1,8 @@
 class MiembrosController < ApplicationController
-  before_action :set_miembro, only: %i[ show edit update destroy ]
+  before_action :set_miembro, only: %i[ show edit update destroy tickets]
+
+  def tickets
+  end
 
   # GET /miembros or /miembros.json
   def index

@@ -7,8 +7,9 @@ class Ticket < ApplicationRecord
 
     STATUS_ARR= [ABI,PRO,RES,REE]
 
-
     belongs_to :miembro
+
+    validates_presence_of :nombre, :status, :miembro
 
     def handle
         return self.nombre

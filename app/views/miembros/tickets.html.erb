@@ -1,0 +1,20 @@
+  <div class="card bg-secondary m-2" style="width: 25rem;color:white" >
+    <div class="card-header">
+      Tickets
+    </div>
+    <div class="card-body d-flex flex-column">
+    <ul>
+      <% @miembro.tickets.each do |ticket| %> 
+        <li>
+          <div>
+            <span><u>Nombre</u>: </span><%= ticket.nombre %>
+          </div>
+          <div>
+            <span><u>Status</u>: </span><%= ticket.status %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+        
+    </div>
+  </div>
