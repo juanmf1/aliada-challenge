@@ -9,6 +9,7 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Nombre</th>
+      <th scope="col">Servicio ID</th>
       <th scope="col">Miembro</th>
       <th scope="col">Status</th>
       <th scope="col">Acciones</th>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= ticket.id %></td>
         <td><%= ticket.handle %></td>
+        <td><%= ticket.servicio_id.to_s %></td>
         <td><%= ticket.miembro.handle %></td>
         <td><%= ticket.status %></td>
         <td >

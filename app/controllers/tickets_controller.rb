@@ -73,6 +73,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:nombre, :status, :miembro_id)
+      params.require(:ticket).permit(:nombre, :status, :miembro_id, :servicio_id)
     end
 end
